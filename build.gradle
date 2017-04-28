@@ -1,0 +1,37 @@
+group 'technancy.training'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'application'
+
+
+project.ext {
+    dropwizardVersion = '1.0.6'
+}
+
+description = """ProductReviewer"""
+
+mainClassName="technancy.javatraining.ProductReviewApplication"
+
+
+dependencies {
+    compile "io.dropwizard:dropwizard-core:$dropwizardVersion"
+    // Test
+    testCompile "io.dropwizard:dropwizard-testing:$dropwizardVersion"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile "org.hamcrest:hamcrest-all:1.3"
+    testCompile "io.rest-assured:rest-assured:3.0.2"
+    testCompile 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.4.0'
+}
+
+run {
+    args 'server', 'development.yml'
+}
+
