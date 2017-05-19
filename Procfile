@@ -1,0 +1,1 @@
+web: ./gradle install run
