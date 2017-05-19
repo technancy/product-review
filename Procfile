@@ -1,1 +1,1 @@
-web: ./gradle install run
+web: ./gradlew install run

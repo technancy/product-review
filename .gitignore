@@ -22,3 +22,8 @@ member-portal.profile
 /classes
 jmeter.log
 dump.rdb
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
